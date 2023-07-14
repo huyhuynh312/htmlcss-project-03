@@ -35,18 +35,35 @@ a {
     border: 1px solid var(--second-primary-color);
     text-align: center;
     color: #fff;
-    background-color: var(--second-primary-color);
+    background: var(--second-primary-color);
 }
 
 .btn:hover {
+    color: var(--second-primary-color);
     opacity: 0.9;
     cursor: pointer;
+    background: transparent;
 }
 
 .container {
     width: 1170px;
     max-width: calc(100% - 48px);
     margin: 0 auto;
+}
+
+.desc {
+    font-weight: 300;
+    color: #c9d2da;
+}
+
+.desc.lv1 {
+    font-size: 1.8rem;
+    line-height: 1.67;
+}
+
+.desc.lv2 {
+    font-size: 1.6rem;
+    line-height: 1.75;
 }
 
 /* Header */
@@ -123,7 +140,7 @@ a {
     padding-left: 0;
 }
 
-.action__log-in,
+.header-action__log-in,
 .navbar__link {
     padding: 4px 21px;
     font-size: 1.6rem;
@@ -131,7 +148,7 @@ a {
     color: #c9d2da;
 }
 
-.action__log-in:hover,
+.header-action__log-in:hover,
 .navbar__link:hover,
 .navbar__link--active {
     color: #fff;
@@ -150,14 +167,86 @@ a {
     background: #fff;
 }
 
-.action__sign-up {
+.header-action {
+    display: flex;
+    align-items: center;
+}
+
+.header-action__log-in {
+    margin-right: 7px;
+}
+
+.header-action__sign-up {
     --height: 44px;
     font-size: 1.6rem;
     min-width: 104px;
     border-radius: 22px;
 }
 
-.action__sign-up:hover {
+.header-action__sign-up:hover {
     color: var(--second-primary-color);
     background: transparent;
+}
+
+/* Hero */
+.hero {
+    margin-top: 76px;
+    display: flex;
+    align-items: center;
+}
+
+/* Hero left */
+.hero__info {
+    width: 54.4%;
+}
+
+.hero__heading {
+    width: 517px;
+    font-size: 7rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.14;
+    letter-spacing: -1.4px;
+}
+
+.hero__desc {
+    margin-top: 22px;
+    width: 468px;
+}
+
+.hero__cta {
+    margin-top: 38px;
+}
+
+.hero__phone {
+    margin-left: 38px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/* Hero right */
+.hero__media {
+    width: 45.6%;
+}
+
+.hero__images {
+    display: flex;
+    align-items: center;
+}
+
+.hero__thumb {
+    width: 330px;
+    height: 540px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.hero__thumb-1 {
+    position: relative;
+    margin-right: -6px;
+}
+
+.hero__thumb-2 {
+    width: 210px;
+    height: 410px;
 }
