@@ -36,13 +36,14 @@ a {
     text-align: center;
     color: #fff;
     background: var(--second-primary-color);
+    transition: 0.25s;
 }
 
 .btn:hover {
     color: var(--second-primary-color);
     opacity: 0.9;
     cursor: pointer;
-    background: transparent;
+    background: var(--primary-color);
 }
 
 .container {
@@ -53,7 +54,7 @@ a {
 
 .desc {
     font-weight: 300;
-    color: #c9d2da;
+    color: #575f66;
 }
 
 .desc.lv1 {
@@ -64,6 +65,14 @@ a {
 .desc.lv2 {
     font-size: 1.6rem;
     line-height: 1.75;
+}
+
+.service__heading {
+    color: var(--primary-color);
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -1px;
 }
 
 /* Header */
@@ -212,6 +221,7 @@ a {
 .hero__desc {
     margin-top: 22px;
     width: 468px;
+    color: #c9d2da;
 }
 
 .hero__cta {
@@ -249,4 +259,92 @@ a {
 .hero__thumb-2 {
     width: 210px;
     height: 410px;
+}
+
+/* Service */
+.service {
+    padding: 170px 0;
+    background: #fff;
+}
+
+.service-top {
+    text-align: center;
+}
+
+.service__desc {
+    margin: 18px auto 0;
+    width: 468px;
+}
+
+.service__media {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service__images {
+    width: 48.7%;
+}
+
+.service__img {
+    width: 570px;
+    height: 570px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.service__list {
+    margin-bottom: 55px;
+}
+
+/* Service item */
+.service__item {
+    padding: 22px;
+    width: 470px;
+    border-radius: 10px;
+    background: #fff;
+    display: flex;
+    transition: 0.25s;
+}
+
+.service__item:hover {
+    position: relative;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.service__item:hover .service__icon {
+    color: #fff;
+    background-color: var(--second-primary-color);
+}
+
+.service__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    background-color: #eff6fd;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+    transition: 0.25s;
+}
+
+.service__body {
+    margin-left: 20px;
+}
+
+.service__title {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.26;
+}
+
+.service__desc.desc.lv2 {
+    margin-top: 8px;
+    width: auto;
 }
