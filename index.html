@@ -96,15 +96,31 @@
 
         <!-- Styles CSS -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- Header -->
+        <!-- PC header -->
         <header class="header">
             <div class="container">
                 <!-- Header top -->
                 <div class="header-top">
+                    <!-- Tablet/Mobile menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- Logo -->
-                    <a href="/">
+                    <a href="/" class="logo__link">
                         <div class="logo">
                             <span class="logo__circle"></span>
                             <span class="logo__text">
@@ -116,9 +132,9 @@
                         </div>
                     </a>
 
-                    <!-- Navbar -->
+                    <!-- PC navbar -->
                     <nav class="navbar">
-                        <ul class="navbar__list">
+                        <ul id="pc-nav" class="navbar__list">
                             <li class="navbar__item">
                                 <a
                                     href="/"
@@ -139,6 +155,17 @@
                                 <a href="#doctors" class="navbar__link">
                                     Doctors
                                 </a>
+                            </li>
+                            <li class="navbar__item show-on-mobile">
+                                <a
+                                    href="#!"
+                                    class="navbar__link navbar__link--separate"
+                                >
+                                    Log in
+                                </a>
+                            </li>
+                            <li class="navbar__item show-on-mobile">
+                                <a href="#!" class="navbar__link"> Sign up </a>
                             </li>
                         </ul>
                     </nav>
@@ -188,6 +215,48 @@
                     </div>
                 </section>
             </div>
+        </header>
+
+        <!-- Tablet/Mobile header -->
+        <header class="mobile-header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+            />
+
+            <!-- Overlay -->
+            <label
+                for="menu-checkbox"
+                class="mobile-header__menu-overlay"
+            ></label>
+
+            <!-- Content -->
+            <label class="mobile-header__menu-drawer">
+                <!-- Logo -->
+                <a href="/">
+                    <div class="logo">
+                        <span class="logo__circle"></span>
+                        <span class="logo__text">
+                            <span class="logo__brand">shine</span>
+                            <span class="logo__brand logo__brand--small">
+                                smile
+                            </span>
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Mobile navbar -->
+                <ul id="mobile-nav"></ul>
+                <script>
+                    const pcNav = document.querySelector("#pc-nav");
+                    const mobileNav = document.querySelector("#mobile-nav");
+
+                    // Copy from PC nav -> Mobile nav
+                    mobileNav.innerHTML = pcNav.innerHTML;
+                </script>
+            </label>
         </header>
 
         <main>

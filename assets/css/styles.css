@@ -8,6 +8,11 @@
     --second-primary-color: #2e80ce;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -22,12 +27,15 @@ a {
     text-decoration: none;
 }
 
+a,
 input,
 textarea,
 select,
 button {
     font-family: inherit;
     font-size: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .btn {
@@ -326,10 +334,6 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.service__images {
-    width: 48.7%;
 }
 
 .service__img {
@@ -845,7 +849,6 @@ button {
 }
 
 .footer-form__desc {
-    margin-top: 20px;
     max-width: 273px;
     font-weight: 400;
     color: #a9b3bb;
