@@ -11,6 +11,7 @@
 html,
 body {
     scroll-behavior: smooth;
+    overscroll-behavior: none;
 }
 
 html {
@@ -120,10 +121,6 @@ button {
     border-color: var(--second-primary-color);
     cursor: pointer;
     color: #fff;
-}
-
-.control__icon {
-    rotate: 180deg;
 }
 
 /* Header */
