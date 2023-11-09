@@ -99,6 +99,12 @@
 
         <!-- Responsive CSS -->
         <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+        <!-- Animation -->
+        <link
+            href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <!-- PC header -->
@@ -178,7 +184,7 @@
                 <section class="hero">
                     <!-- Hero left -->
                     <section class="hero__info">
-                        <h1 class="hero__heading">
+                        <h1 class="hero__heading" data-aos="fade-right">
                             Exceptional dental care for all ages.
                         </h1>
                         <p class="hero__desc desc lv1">
@@ -269,7 +275,12 @@
 
                     <!-- Service media -->
                     <div class="service__media">
-                        <figure class="service__images">
+                        <figure
+                            class="service__images"
+                            data-aos="fade-right"
+                            data-aos-offset="300"
+                            data-aos-easing="ease-in-sine"
+                        >
                             <img
                                 src="./assets/img/service.jpg"
                                 alt="Our services"
@@ -478,7 +489,11 @@
                                 injury, or the natural aging process, dentures
                                 might be the perfect solution.
                             </p>
-                            <a href="#!" class="btn featured__btn">
+                            <a
+                                href="#!"
+                                class="btn featured__btn"
+                                data-aos="zoom-in-left"
+                            >
                                 Learn More
                             </a>
                         </section>
@@ -954,5 +969,9 @@
                 </div>
             </div>
         </footer>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
     </body>
 </html>
